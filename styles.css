@@ -1,0 +1,568 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    z-index: 100;
+    margin: auto;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* First Banner */
+.firstBanner {
+    background-image: url('/assets/img/banner/The\ Flint\ &\ Gold.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.firstBanner .explore-content h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px; /* Reduce the margin to move the button down */
+}
+
+/* Second Banner */
+/* Second Banner with Slideshow Background */
+.secondBanner {
+    background-image: url('/assets/img/banner/Untitled-1.png'); /* Initial background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px; /* Adjust height as necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Ensure text/content is above background */
+    overflow: hidden; /* Hide any excess of background during transitions */
+    animation: backgroundSlideshow 15s infinite; /* Apply the animation */
+}
+
+/* Keyframes for the new slideshow background with resizing and fade effect */
+@keyframes backgroundSlideshow {
+    0% {
+        background-image: url('/assets/img/banner/Untitled-3.png'); /* First image */
+        background-size: 100% 100%; /* Ensure image covers full area */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        background-image: url('/assets/img/banner/Create\ Your\ Website.jpg'); /* Second image */
+        background-size: 100% 100%; /* Ensure image covers full area */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        background-image: url('/assets/img/banner/new\ arivals\ banner.png'); /* Third image */
+        background-size: 100% 100%; /* Ensure image covers full area */
+        opacity: 1; /* Fully visible */
+    }
+    
+}
+
+
+/* Optional: Add styles for the text content within the banner */
+.secondBanner .explore-content h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.secondBanner .btn-explore {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.secondBanner .btn-explore:hover {
+    background-color: #2a36d6;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.secondBanner .btn-explore {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.secondBanner .btn-explore:hover {
+    background-color: #2980b9;
+}
+
+/* Featured Collections */
+.collections {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.collections h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.collection-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.collection-card {
+    width: 32%;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: scale(1.05);
+}
+
+.collection-card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.collection-card h3 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.collection-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.collection-card .btn-view {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.collection-card .btn-view:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Styles */
+
+/* Tablet/Medium Devices */
+@media (max-width: 1024px) {
+    .firstBanner {
+        height: 400px;
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Change to column layout */
+        text-align: center; /* Center align text */
+        height: auto; /* Auto height to adjust based on content */
+        padding: 0; /* Remove any default padding */
+    }
+    
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 1.2rem; /* Adjust font size if needed */
+        padding: 10px; /* Add padding to make the items more tappable */
+    }
+    
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+    .firstBanner {
+        height: 350px;
+    }
+
+    .secondBanner {
+        height: 300px;
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    
+    }
+
+    .collection-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .collection-card {
+        width: 80%;
+        height: auto;
+    }
+
+
+/* Very Small Screens (Mobile Portrait) */
+@media (max-width: 480px) {
+    .firstBanner {
+        height: 250px;
+    }
+
+    .secondBanner {
+        height: 250px;
+    }
+
+    .secondBanner .btn-explore {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 10px; /* Space between items */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0; /* Remove extra margin */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Adjust font size */
+        padding: 10px 15px; /* Increase padding for better touch targets */
+    }
+
+    /* Optional: Adjust background color of the navbar */
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.8); /* Background color on small screens */
+    }
+    .collection-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+
+.button-shop {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    height: 50px; /* Full viewport height to center in the page */
+    background-color: #f5f5f5; /* Optional: Background color for contrast */
+}
+
+.btn {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+    margin: auto;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: #4cc9f0;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.btn:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+/* Products */
+/* Style the Reflow Product Cards */
+.reflow-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.reflow-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reflow-card img {
+   
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.reflow-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.reflow-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.reflow-card .reflow-product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.reflow-card .reflow-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.reflow-card .reflow-button:hover {
+    background-color: #0056b3;
+}
+
+.my-list{
+    width: 100vw !important;
+    color: white !important;
+    display: flex;
+    justify-content: center;
+}
+
+.ref-products{
+    
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column by default */
+  gap: 16px; /* Space between items */
+  padding: 16px;
+  max-width: 1200px; /* Optional, limits the width of the grid */
+  width: 100%;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+}
+
+/* Large screens (4 columns) */
+@media (min-width: 480px) and (max-width: 699px) {
+  .ref-products {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (min-width: 700px) {
+    .ref-products {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    }
+  }
+
+  @media (min-width: 700px) {
+    .ref-products>a:nth-child(n+5) {
+      display: none;
+    }
+  }
+  .ref-product{
+    border: 1px solid gray;
+ 
+    color: black !important;
+  }
+
+.reflow-product{
+    background-color:darkgray;
+}
+.ref-product{
+    border: 1px solid gray;
+ 
+    color: black !important;
+  }
+
+.reflow-product{
+    background-color:rgb(14, 10, 10);
+}
+.ref-button{
+    margin-bottom: 5px !important;
+    display: inline-block;
+    text-decoration: none !important;
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Make the text bold */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    text-decoration: none; /* Remove underline from link */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; 
+}
+.ref-product {
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important; /* Custom shadow */
+    border-radius: 10px !important; /* Optional: Adds rounded corners */
+}
+.ref-product:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More intense shadow on hover */
+    transform: translateY(-5px); /* Adds a small lift effect on hover */
+}
+.ref-image {
+    border-top-left-radius: 10px !important;  /* Round the top-left corner */
+    border-top-right-radius: 10px !important; /* Round the top-right corner */
+    overflow: hidden;              /* Ensure the image content stays within the rounded corners */
+}
+
+.ref-addons {
+    display: flex;
+    justify-content: center;  /* Horizontally center the button */
+    align-items: center;      /* Vertically center the button */
+    margin-top: 10px;         /* Optional: Add space above the button */
+}
+.ref-product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Horizontally center the button */
+    align-items: center;      /* Vertically center the button */
+    margin-top: 10px;         /* Optional: Add space above the button */
+}
+.ref-price{
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+}
+.ref-product-preview-header{
+    background-color: #000;
+}
+.ref-product-preview-content{
+    background-color: #000;
+}
+
+/* floating Cart */
+/* Position the cart icon fixed at the bottom-right corner */
+.floating-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Style the cart count bubble */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #fff;
+    color: #ff6f61;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+    line-height: 16px;
+}
+
+/* Add hover effect to the cart icon */
+.floating-cart:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
